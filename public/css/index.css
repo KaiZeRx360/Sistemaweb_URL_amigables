@@ -1,0 +1,212 @@
+/* Estilo general del body */
+body {
+    background: radial-gradient(circle at top left, #121212, #000000); /* Fondo oscuro con degradado */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para encabezados con efecto neón */
+.neon-text {
+    color: #00ff00; /* Color neón verde */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00; /* Efecto de neón */
+}
+
+/* Estilo general para botones */
+.btn {
+    position: relative; /* Posicionamiento relativo para el efecto de neón */
+    color: white; /* Color del texto por defecto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+/* Botón de "Agregar" (color verde) */
+.btn-add {
+    background: linear-gradient(135deg, #00ff00, #00cc00); /* Color verde */
+}
+
+.btn-add:before {
+    content: ""; /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Tamaño del efecto */
+    height: 300%;
+    background: rgba(0, 255, 0, 0.5); /* Color de fondo del efecto */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: all 0.5s; /* Transición suave */
+    z-index: 0; /* Detrás del texto */
+    transform: translate(-50%, -50%) scale(0); /* Escala inicial */
+}
+
+.btn-add:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Escala al pasar el mouse */
+}
+
+.btn-add:hover {
+    color: #fff; /* Color de texto blanco al pasar el mouse */
+}
+
+/* Botón de "Editar" (color amarillo) */
+.btn-edit {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Color amarillo */
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; /* Efecto neón amarillo */
+}
+
+.btn-edit:before {
+    content: ""; /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Tamaño del efecto */
+    height: 300%;
+    background: rgba(255, 204, 0, 0.5); /* Color de fondo del efecto */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: all 0.5s; /* Transición suave */
+    z-index: 0; /* Detrás del texto */
+    transform: translate(-50%, -50%) scale(0); /* Escala inicial */
+}
+
+.btn-edit:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Escala al pasar el mouse */
+}
+
+.btn-edit:hover {
+    color: #fff; /* Color de texto blanco al pasar el mouse */
+}
+
+/* Botón de "Cerrar Sesión" (color rojo) */
+.btn-logout {
+    background: linear-gradient(135deg, #ff0000, #cc0000); /* Color rojo */
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; /* Efecto neón rojo */
+}
+
+.btn-logout:before {
+    content: ""; /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Tamaño del efecto */
+    height: 300%;
+    background: rgba(255, 0, 0, 0.5); /* Color de fondo del efecto */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: all 0.5s; /* Transición suave */
+    z-index: 0; /* Detrás del texto */
+    transform: translate(-50%, -50%) scale(0); /* Escala inicial */
+}
+
+.btn-logout:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Escala al pasar el mouse */
+}
+
+.btn-logout:hover {
+    color: #fff; /* Color de texto blanco al pasar el mouse */
+}
+
+/* Botón de "Eliminar" (color rojo oscuro) */
+.btn-delete {
+    background: linear-gradient(135deg, #b22222, #ff4500); /* Color rojo oscuro */
+    text-shadow: 0 0 5px #b22222, 0 0 10px #b22222; /* Efecto neón rojo oscuro */
+}
+
+.btn-delete:before {
+    content: ""; /* Contenido vacío para el pseudo-elemento */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Tamaño del efecto */
+    height: 300%;
+    background: rgba(178, 34, 34, 0.5); /* Color de fondo del efecto */
+    border-radius: 50%; /* Bordes redondeados */
+    transition: all 0.5s; /* Transición suave */
+    z-index: 0; /* Detrás del texto */
+    transform: translate(-50%, -50%) scale(0); /* Escala inicial */
+}
+
+.btn-delete:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Escala al pasar el mouse */
+}
+
+.btn-delete:hover {
+    color: #fff; /* Color de texto blanco al pasar el mouse */
+}
+
+/* Tabla */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0; /* Margen entre la tabla y otros elementos */
+}
+
+.table thead {
+    background-color: #1d1d1d; /* Color oscuro para el encabezado */
+}
+
+.table th, .table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+/* Encabezados de la tabla con efecto neón según el color */
+.table th {
+    color: #00ff00; /* Color neón verde para el texto de encabezados */
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Efecto de neón */
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 255, 0, 0.2); /* Color de fondo al pasar el mouse */
+}
+
+/* Tarjetas */
+.card {
+    background-color: #1d1d1d; /* Color de fondo de las tarjetas */
+    border: 1px solid #00ff00; /* Borde neón verde */
+    box-shadow: 0 0 15px #00ff00; /* Sombra de neón para las tarjetas */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    transition: transform 0.3s; /* Transición para efecto hover */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilo del modal */
+.modal {
+    background-color: #1d1d1d; /* Color oscuro para el modal */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+}
+
+.modal h2 {
+    color: #ffcc00; /* Color del encabezado del modal */
+    text-shadow: 0 0 5px #ffcc00; /* Efecto de neón más sutil */
+}
+
+.modal .btn {
+    text-shadow: none; /* Quitar efecto de neón para botones del modal */
+}
+
+/* Estilos para los botones en el modal con efecto neón */
+.modal .btn-edit {
+    background: linear-gradient(135deg, #ffcc00, #ff9900); /* Color amarillo */
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; /* Efecto neón amarillo */
+}
+
+.modal .btn-logout {
+    background: linear-gradient(135deg, #ff0000, #cc0000); /* Color rojo */
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000; /* Efecto neón rojo */
+}
+
+.modal .btn-add {
+    background: linear-gradient(135deg, #00ff00, #00cc00); /* Color verde */
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00; /* Efecto neón verde */
+}
+
+.modal .btn-delete {
+    background: linear-gradient(135deg, #b22222, #ff4500); /* Color rojo oscuro */
+    text-shadow: 0 0 5px #b22222, 0 0 10px #b22222; /* Efecto neón rojo oscuro */
+}

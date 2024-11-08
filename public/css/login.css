@@ -1,0 +1,122 @@
+
+        body {
+            background: radial-gradient(circle at top left, #1a1a1a, #000000);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(255, 255, 0, 0.3), 0 4px 15px rgba(255, 255, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s; /* Añadido para la animación */
+        }
+
+        .login-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 0, 0.1), rgba(255, 255, 0, 0.2));
+            border-radius: 20px;
+            z-index: 0;
+            filter: blur(15px);
+        }
+
+        .login-container > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-container:hover {
+            transform: scale(1.05); /* Aumenta el tamaño de la tarjeta al pasar el mouse */
+            box-shadow: 0 0 40px rgba(255, 255, 0, 0.5), 0 0 60px rgba(255, 255, 0, 0.3); /* Sombra más intensa */
+        }
+
+        h3 {
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffff00;
+        }
+
+        .login-container i.fas.fa-sign-in-alt {
+            font-size: 80px;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            color: #f0f0f0;
+            text-shadow: 0 0 5px #ffcc00;
+        }
+
+        /* Botón de iniciar sesión */
+        .login-btn {
+            background: linear-gradient(135deg, #ffcc00, #ffcc66);
+            color: black;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc66;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc66;
+        }
+
+        /* Botón de registrar */
+        .btn-danger {
+            background: linear-gradient(135deg, #ff3300, #ff0000);
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #ff3300, 0 0 20px #ff0000;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-danger:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff3300, 0 0 30px #ff0000;
+        }
+
+        .input-group-text {
+            background-color: transparent;
+            border: none;
+            color: #ffcc00;
+        }
+
+        .form-control {
+            background-color: transparent;
+            border-radius: 12px;
+            border: 1px solid #ffcc00;
+            color: white;
+            box-shadow: 0 0 8px #ffcc00;
+            transition: box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            background-color: transparent;
+            border-color: #ffcc66;
+            box-shadow: 0 0 10px #ffcc00, 0 0 20px #ffff00;
+        }
+    
